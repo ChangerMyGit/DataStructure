@@ -20,4 +20,13 @@ void deleteSingle(Vector * vec,unsigned int i);
 int find(Vector * vec,unsigned int i);
 // 去重
 void reduplicate(Vector * vec);
+// 查看是否有序
+int disortered(Vector * vec);
+// 对有序向量去重 ，时间复杂度为O(n)
+int uniquify(Vector * vec);
+// 排序
+void sort(Vector * vec);
+// 二分查找 lo = 0 hi = length
+int binSearch(Vector * vec,int lo,int hi,int x);
+void vec_swap(int * x , int * y);
 void printVector(Vector * vec );

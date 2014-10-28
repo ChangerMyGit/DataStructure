@@ -9,14 +9,22 @@ int main(){
 		insert(&vec,i);
 	for(i=1;i<=10;i++)
 		insert(&vec,i);
-	deleteSingle(&vec,2);
+	for(i=1;i<=5;i++)
+		insert(&vec,i);
+	//deleteSingle(&vec,2);
 	printVector(&vec);
 	printf("\n");
 	//insert2(&vec,16,2);
 	//deleteRange(&vec,1,7);
 	//deleteSingle(&vec,9);
-	reduplicate(&vec);
+	//reduplicate(&vec);
+	//printVector(&vec);
+	sort(&vec);
 	printVector(&vec);
-	//printf("\n%d\n",find(&vec,8));
+    printf("\n");
+	uniquify(&vec);
+	printVector(&vec);
+	printf("\n");
+	printf("%d",binSearch(&vec,0,10,5));
 	return 0;
 }

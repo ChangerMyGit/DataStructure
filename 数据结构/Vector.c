@@ -10,6 +10,7 @@ void initVector(Vector * vec , int capacity){
 
 void expand(Vector * vec){
 	vec->elem = (int *)realloc(vec->elem , vec->capacity  << 1);
+	vec->capacity <<=1; 
 }
 
 void insert(Vector * vec , int e){
@@ -66,6 +67,54 @@ void reduplicate(Vector * vec){
 		}
 		i++;
 	}
+}
+
+int disortered(Vector * vec){
+	int n = 0 ,i;
+	for(i = 0;i<vec->size;i++){
+		n += (vec->elem[i] > vec->elem[i+1]);
+	}
+	return n;
+}
+
+// 对有序向量去重 ，时间复杂度为O(n)
+int uniquify(Vector * vec){
+	int i,j;
+	for(i = 0 , j = 1;j<vec->size;j++){
+		if(vec->elem[i] != vec->elem[j]){
+		    vec->elem[++i] = vec->elem[j]; // 复制到i之后的元素 然后i增1
+		}
+	}
+	vec->size = ++i;
+	return j - i +1;
+}
+
+void vec_swap(int * x , int * y){
+	int temp;
+	temp = *x;
+	*x = *y;
+	*y = temp;
+}
+
+void sort(Vector * vec){
+	int i , j;
+	for(i = vec->size;i>0;i--)
+		for(j=1;j<i;j++){
+			if(vec->elem[j-1] >  vec->elem[j])
+				vec_swap(&vec->elem[j-1],&vec->elem[j]);
+		}
+}
+
+// lo = 0 hi = length
+int binSearch(Vector * vec,int lo,int hi,int x){
+	int mi;
+	while(lo < hi){
+		mi = (lo + hi) >> 1;
+		if(vec->elem[mi] > x) hi = mi;
+		else if(vec->elem[mi] < x) lo = mi + 1;
+		else return mi;
+	}
+	return -1;
 }
 
 void printVector(Vector * vec){
