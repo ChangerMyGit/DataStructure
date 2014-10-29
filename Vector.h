@@ -1,3 +1,4 @@
+#define MAX_SIZE 100
 typedef struct _vec{
 	int size;
 	int * elem;
@@ -28,5 +29,12 @@ int uniquify(Vector * vec);
 void sort(Vector * vec);
 // 二分查找 lo = 0 hi = length
 int binSearch(Vector * vec,int lo,int hi,int x);
+// 二分查找 lo = 0 hi = length-1
+int binSearch2(Vector * vec,int lo,int hi,int x);
+// 斐波那契查找
+int fibonacciSearch(Vector * vec,int x);
+//构建斐波那契序列  
+void fibonacci(int *f);   
+// 替换
 void vec_swap(int * x , int * y);
 void printVector(Vector * vec );

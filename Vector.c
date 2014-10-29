@@ -117,6 +117,47 @@ int binSearch(Vector * vec,int lo,int hi,int x){
 	return -1;
 }
 
+// lo = 0 hi = length-1
+int binSearch2(Vector * vec,int lo,int hi,int x){
+	int mi;
+	while(lo <= hi){
+		mi = (lo + hi) >> 1;
+		if(vec->elem[mi] > x) hi = mi-1;
+		else if(vec->elem[mi] < x) lo = mi + 1;
+		else return mi;
+	}
+	return -1;
+}
+
+void fibonacci(int *f){
+	int i;
+	f[0] = 0;
+	f[1] = 1;
+	for(i = 2 ;i < MAX_SIZE; i++){
+		f[i] = f[i-1] + f[i-2];
+	}
+}
+
+int fibonacciSearch(Vector * vec,int x){
+	int lo = 0 ,hi = vec->size ,mi , k = 0;
+	int f[MAX_SIZE];
+    fibonacci(f);
+	while(vec->size > f[k]-1)
+		k++;
+	while(lo < hi){
+	    mi = lo + f[k-1] - 1;
+		if(vec->elem[mi] > x){
+			hi = mi;
+			k -=1;
+		} else if(vec->elem[mi] < x){
+		    lo = mi + 1;
+			k -=2;
+		} else 
+			return mi;
+	}
+	return -1;
+}
+
 void printVector(Vector * vec){
 	int i = 0;
 	for(;i<vec->size;i++)

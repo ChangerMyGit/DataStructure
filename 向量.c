@@ -5,9 +5,9 @@ int main(){
 	int i;
 	Vector vec;
 	initVector(&vec,10 * sizeof(int));
-	for(i=1;i<=10;i++)
+	for(i=1;i<=13;i++)
 		insert(&vec,i);
-	for(i=1;i<=10;i++)
+	for(i=1;i<=13;i++)
 		insert(&vec,i);
 	for(i=1;i<=5;i++)
 		insert(&vec,i);
@@ -25,6 +25,8 @@ int main(){
 	uniquify(&vec);
 	printVector(&vec);
 	printf("\n");
-	printf("%d",binSearch(&vec,0,10,5));
+	printf("%d\n",binSearch(&vec,0,13,7));
+	printf("%d\n",binSearch2(&vec,0,12,7));
+	printf("%d\n",fibonacciSearch(&vec,13));
 	return 0;
 }
