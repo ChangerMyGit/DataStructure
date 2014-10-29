@@ -105,6 +105,18 @@ void sort(Vector * vec){
 		}
 }
 
+// lo = 0 hi = length
+int binSearch(Vector * vec,int lo,int hi,int x){
+	int mi;
+	while(lo < hi){
+		mi = (lo + hi) >> 1;
+		if(vec->elem[mi] > x) hi = mi;
+		else if(vec->elem[mi] < x) lo = mi + 1;
+		else return mi;
+	}
+	return -1;
+}
+
 void printVector(Vector * vec){
 	int i = 0;
 	for(;i<vec->size;i++)

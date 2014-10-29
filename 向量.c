@@ -24,5 +24,7 @@ int main(){
     printf("\n");
 	uniquify(&vec);
 	printVector(&vec);
+	printf("\n");
+	printf("%d",binSearch(&vec,0,10,5));
 	return 0;
 }

@@ -26,5 +26,7 @@ int disortered(Vector * vec);
 int uniquify(Vector * vec);
 // ≈≈–Ú
 void sort(Vector * vec);
+// ∂˛∑÷≤È’“ lo = 0 hi = length
+int binSearch(Vector * vec,int lo,int hi,int x);
 void vec_swap(int * x , int * y);
 void printVector(Vector * vec );
