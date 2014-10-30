@@ -44,4 +44,9 @@ void vec_swap(int * x , int * y);
 // 冒泡排序改进版
 void bubbleSort(Vector * vec);
 int bubble(Vector * vec,int lo,int hi);
+// ------------------------------
+// 对于已经部分排序的序列 记录其的位置，下次遍历跳过这部分序列
+void bubbleSort2(Vector * vec);
+int bubble2(Vector * vec,int lo,int hi);
+
 void printVector(Vector * vec );

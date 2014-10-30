@@ -75,6 +75,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Vector.c" />
+    <ClCompile Include="冒泡测试.c" />
     <ClCompile Include="向量.c" />
     <ClCompile Include="序章.c" />
   </ItemGroup>

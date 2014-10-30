@@ -1,7 +1,7 @@
 #include "Vector.h"
 #include <stdio.h>
 
-int main(){
+int main2(){
 	int i;
 	Vector vec;
 	initVector(&vec,10 * sizeof(int));

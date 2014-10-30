@@ -189,6 +189,23 @@ int bubble(Vector * vec,int lo,int hi){
 	return sorted;
 }
 
+void bubbleSort2(Vector * vec){
+   int hi = vec->size;
+   while ((hi = bubble2(vec,1,hi)) > 1)
+	   ;
+}
+
+int bubble2(Vector * vec,int lo,int hi){
+	int last = lo;
+	for(;lo < hi; lo++){
+		if(vec->elem[lo-1] > vec->elem[lo]){
+			vec_swap(&vec->elem[lo-1],&vec->elem[lo]);
+			last = lo;
+		}
+	}
+	return last;
+}
+
 void printVector(Vector * vec){
 	int i = 0;
 	for(;i<vec->size;i++)
