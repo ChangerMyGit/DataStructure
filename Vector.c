@@ -23,7 +23,7 @@ void insert(Vector * vec , int e){
 void insert2(Vector * vec , int e,int i){
 	int len = vec->size;
 	// ÕûÌåºóÒÆ
-	if(i>0 && i< vec->size){
+	if(i>=0 && i< vec->size){
 		while(len > i){
 			vec->elem[len] = vec->elem[len-1];
 			len --;
