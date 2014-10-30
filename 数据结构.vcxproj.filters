@@ -30,4 +30,9 @@
       <Filter>源文件</Filter>
     </ClInclude>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\..\..\AppData\Roaming\Tencent\QQ\Temp\斐波那契查找图片.jpg">
+      <Filter>资源文件</Filter>
+    </None>
+  </ItemGroup>
 </Project>

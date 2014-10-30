@@ -1,4 +1,6 @@
 #define MAX_SIZE 100
+#define TRUE 1
+#define FALSE 0
 typedef struct _vec{
 	int size;
 	int * elem;
@@ -11,7 +13,7 @@ void initVector(Vector * vec , int capacity);
 void expand(Vector * vec);
 // 插入
 void insert(Vector * vec , int e);
-// 插入
+// 插入 
 void insert2(Vector * vec , int e,unsigned int i);
 // 删除 范围删除
 void deleteRange(Vector * vec,unsigned int lo,unsigned int high);
@@ -31,10 +33,15 @@ void sort(Vector * vec);
 int binSearch(Vector * vec,int lo,int hi,int x);
 // 二分查找 lo = 0 hi = length-1
 int binSearch2(Vector * vec,int lo,int hi,int x);
+// 二分查找 解决左右分支不平衡的问题
+int binSearch3(Vector * vec,int x);
 // 斐波那契查找
 int fibonacciSearch(Vector * vec,int x);
 //构建斐波那契序列  
 void fibonacci(int *f);   
 // 替换
 void vec_swap(int * x , int * y);
+// 冒泡排序改进版
+void bubbleSort(Vector * vec);
+int bubble(Vector * vec,int lo,int hi);
 void printVector(Vector * vec );

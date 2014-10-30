@@ -1,10 +1,17 @@
-﻿生成启动时间为 2014/10/28 16:52:48。
+﻿生成启动时间为 2014/10/30 9:37:02。
      1>项目“C:\Users\Administrator\documents\visual studio 2010\Projects\数据结构\数据结构\数据结构.vcxproj”在节点 2 上(build 个目标)。
      1>InitializeBuildStatus:
          正在创建“Debug\数据结构.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
        ClCompile:
-         D:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TC /analyze- /errorReport:prompt "向量.c"
+         D:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TC /analyze- /errorReport:prompt Vector.c "向量.c"
          向量.c
+         Vector.c
+     1>c:\users\administrator\documents\visual studio 2010\projects\数据结构\数据结构\vector.c(23): warning C4028: 形参 3 与声明不同
+     1>c:\users\administrator\documents\visual studio 2010\projects\数据结构\数据结构\vector.c(40): warning C4018: “<”: 有符号/无符号不匹配
+     1>c:\users\administrator\documents\visual studio 2010\projects\数据结构\数据结构\vector.c(40): warning C4018: “<”: 有符号/无符号不匹配
+     1>c:\users\administrator\documents\visual studio 2010\projects\数据结构\数据结构\vector.c(42): warning C4018: “<”: 有符号/无符号不匹配
+     1>c:\users\administrator\documents\visual studio 2010\projects\数据结构\数据结构\vector.c(54): warning C4018: “<”: 有符号/无符号不匹配
+         正在生成代码...
        ManifestResourceCompile:
          所有输出均为最新。
        Link:
@@ -25,4 +32,4 @@
 
 生成成功。
 
-已用时间 00:00:00.50
+已用时间 00:00:00.53

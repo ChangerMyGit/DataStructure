@@ -19,7 +19,9 @@ int main(){
 	//deleteSingle(&vec,9);
 	//reduplicate(&vec);
 	//printVector(&vec);
-	sort(&vec);
+	//sort(&vec);
+	bubbleSort(&vec);
+	bubbleSort(&vec);
 	printVector(&vec);
     printf("\n");
 	uniquify(&vec);
@@ -28,5 +30,6 @@ int main(){
 	printf("%d\n",binSearch(&vec,0,13,7));
 	printf("%d\n",binSearch2(&vec,0,12,7));
 	printf("%d\n",fibonacciSearch(&vec,13));
+	printf("%d\n",binSearch3(&vec,2));
 	return 0;
 }

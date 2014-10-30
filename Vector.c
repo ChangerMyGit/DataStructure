@@ -99,7 +99,7 @@ void vec_swap(int * x , int * y){
 void sort(Vector * vec){
 	int i , j;
 	for(i = vec->size;i>0;i--)
-		for(j=1;j<i;j++){
+		for(j = 1; j < i ; j++){
 			if(vec->elem[j-1] >  vec->elem[j])
 				vec_swap(&vec->elem[j-1],&vec->elem[j]);
 		}
@@ -129,6 +129,19 @@ int binSearch2(Vector * vec,int lo,int hi,int x){
 	return -1;
 }
 
+// 二分查找 解决左右分支不平衡的问题
+// 每次只有两个分支 x < a[mi] [lo,mi) a[mi] <= x [mi+1 , hi)
+int binSearch3(Vector * vec,int x){
+	int lo = 0 , mi , hi = vec->size;
+	if(x > vec->elem[hi-1] || x <  vec->elem[lo]) 
+	    return (x > vec->elem[hi-1]) ? hi : lo-1;
+	while(lo < hi){
+		mi = (lo + hi) >> 1;
+		(x < vec->elem[mi]) ? (hi = mi):(lo = mi + 1);
+	}
+	return --lo; // 最终元素是左侧区间的最后一个元素
+}
+
 void fibonacci(int *f){
 	int i;
 	f[0] = 0;
@@ -156,6 +169,24 @@ int fibonacciSearch(Vector * vec,int x){
 			return mi;
 	}
 	return -1;
+}
+
+// 冒泡排序改进版
+void bubbleSort(Vector * vec){
+	int hi = vec->size;
+	// 避免向右移除 使用lo 和 lo - 1 比较 所以lo初始化为1
+	while(!bubble(vec,1,hi--)); // 逐行扫描直至全续
+}
+
+int bubble(Vector * vec,int lo,int hi){
+	int sorted = TRUE;
+	for(;lo < hi; lo++){
+		if(vec->elem[lo-1] > vec->elem[lo]){
+			vec_swap(&vec->elem[lo-1],&vec->elem[lo]);
+			sorted = FALSE;
+		}
+	}
+	return sorted;
 }
 
 void printVector(Vector * vec){
